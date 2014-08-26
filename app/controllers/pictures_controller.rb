@@ -19,7 +19,7 @@
  		]
     end
 
- 		def show
+ 	def show
  		@pictures = [
  			{
  				:title => "The old church on the coast of the White sea",
@@ -39,5 +39,13 @@
  		]
  		@picture = @pictures[params[:id].to_i]
     end
+
+    def new
+    end 
+
+    def create
+    	render :text => "Saving a picture. URL: #{params[:url]}, Title: #{params[:title]}, Artist: #{params[:artist]}"
+    end 
+
 
  end 
